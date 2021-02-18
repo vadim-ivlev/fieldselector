@@ -6,7 +6,6 @@
 package fieldselector
 
 import (
-	"fmt"
 	"regexp"
 	"strings"
 )
@@ -87,7 +86,6 @@ func removeSpaces(s string) string {
 // может быть неполным или с пропусками.
 // - query - текст GraphQL запроса
 func GetSelectedFields(selectionPath []string, query string) []string {
-	fmt.Println("v001 change 4")
 	// (?s) - multiline search, .+? not greedy search
 	var regexpStr = `(?s)` + strings.Join(selectionPath, `.+?`)
 
